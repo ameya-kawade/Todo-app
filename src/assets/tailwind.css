@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+
+.btn {
+  @apply text-sm border-[1px] px-2.5 py-0.5 rounded-md font-medium;
+}
+
+.card-container {
+  @apply border-[1px] border-gray-200 rounded-md;
+}
