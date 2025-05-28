@@ -44,7 +44,6 @@ watch(
     <div class="w-full h-[60em]">
       <TaskContainer
         :tasks="filteredTask"
-        @deleteTask="(task) => taskStore.deleteTaskFromTasks(task)"
       />
 
       <Button @click="showCompleted = !showCompleted" size="small" class="btn self-end my-5">

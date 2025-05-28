@@ -4,8 +4,6 @@ import Checkbox from 'primevue/checkbox'
 import Message from 'primevue/message'
 import { useTaskStore } from '@/stores/TaskStore.js'
 
-const emits = defineEmits(['delete', 'checked'])
-
 const taskStore = useTaskStore()
 
 const props = defineProps({
@@ -15,7 +13,7 @@ const props = defineProps({
 const task = taskStore.tasks.find((t)=>t.id===props.task.id);
 
 function deleteTask() {
-  emits('delete', props.task)
+  taskStore.deleteTaskFromTasks(props.task);
 }
 </script>
 

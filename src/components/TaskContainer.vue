@@ -2,7 +2,6 @@
 import Task from './Task.vue'
 import ScrollPanel from 'primevue/scrollpanel'
 
-const emits = defineEmits(['deleteTask'])
 
 const props = defineProps({
   tasks: Array,
@@ -14,7 +13,6 @@ const props = defineProps({
     <Task
       v-for="task in props.tasks"
       :task="task"
-      @delete="(t) => emits('deleteTask', t)"
       :key="task.id"
     />
   </ScrollPanel>
