@@ -36,6 +36,8 @@ jobs:
 
       - name: Build the project
         run: pnpm build
+        env:
+          BASE: ${{ secrets.BASE }}
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
