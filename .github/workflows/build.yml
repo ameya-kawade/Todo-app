@@ -26,17 +26,17 @@ jobs:
     steps:
       - name: cloning the repo
         uses: actions/checkout@v4
+
+      - name: installing pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
       
       - name: setting up nodejs
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: 'pnpm'
-      
-      - name: installing pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
       
       - name: Installing dependencies
         run: pnpm install
